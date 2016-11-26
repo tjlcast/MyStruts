@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- package 定义一个包，包的作用是： 管理action，通常，一个业务模版一个包 －name: 包的名字，包名不能重复 －extends: 
+		当前包继承至哪一个包（一般为struts-default） struts-default在struts-default.xml中定义的包 －abstract: 
+		表示当前包为抽象包，抽象包中不能有action的定义。（否则在运行是报错） abstract＝true 只有当前的包被其他包继承时使用。 －namespace: 
+		表示名称空间，默认为“／” 作为路径的一部分。 例如：http://localhost:8080/项目／名称空间／actionName action 
+		配置请求路径与action类的映射关系 name － 请求路径名称 class － 请求处理的action类的全名 method － 请求处理的方法 
+		result name － action处理方法的返回值 type － 跳转的结果类型 标签体中为跳转的页面路径 struts.xml： 在struts运行是会加载这个总配置文件：src/struts.xml 
+		include file="path" -->
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="hello" class="bupt.tjlcast.action.HelloAction"
+			method="execute">
+			<result name="success">success.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="default1" namespace="/" extends="struts-default">
+		<action name="hello" class="bupt.tjlcast.action.HelloAction"
+			method="execute">
+			<result name="success">success.jsp</result>
+		</action>
+	</package>
+</struts>
