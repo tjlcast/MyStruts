@@ -6,7 +6,7 @@
 
 <struts>
 	<package name="config2" namespace="/" extends="struts-default">
-		<action name="login" class="config2.UserAction">
+		<action name="login" class="config2.UserAction" method="login">
 			<result name="success">success.jsp</result>
 		</action>
 	</package>

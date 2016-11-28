@@ -9,7 +9,7 @@ public class UserAction {
 	
 	public String login() {
 		System.out.println("UserAction.login2()" + userName);
-		return "login" ;
+		return "success" ;
 	}
 	
 	public String register() {
