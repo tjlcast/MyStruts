@@ -31,13 +31,13 @@ public class DataAction extends ActionSupport implements RequestAware, SessionAw
 		// 3.把数据保存到对象中
 
 		// 方式一：直接拿到ServletApi，执行操作
-		// HttpServletRequest request = ServletActionContext.getRequest() ;
-		// HttpSession session = request.getSession() ;
-		// ServletContext servletContext =
-		// ServletActionContext.getServletContext() ;
-		// request.setAttribute("request_data", "request_data");
-		// session.setAttribute("session_data", "session_data");
-		// servletContext.setAttribute("context_data", "context_data");
+//		 HttpServletRequest request = ServletActionContext.getRequest() ;
+//		 HttpSession session = request.getSession() ;
+//		 ServletContext servletContext =
+//		 ServletActionContext.getServletContext() ;
+//		 request.setAttribute("request_data", "request_data");
+//		 session.setAttribute("session_data", "session_data");
+//		 servletContext.setAttribute("context_data", "context_data");
 
 		// 方式二：直接使用ActionContext类,(仅能向域对象进行增删改查)
 		// 得到Struts对HttpServletRequest对象进行了封装，封装为一个map

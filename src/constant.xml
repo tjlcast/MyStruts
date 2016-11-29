@@ -16,5 +16,10 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<!-- 调试信息 -->
 	<constant name="struts.devMode" value="true" />
+	<!-- 修改最大上传的文件大小 -->
+	<constant name="struts.multipart.maxSize" value="30" />
+	<!-- 修改上传文件的后缀名 -->
+	<constant name="" value="30*1024*1024" />
+	
 	
 </struts>

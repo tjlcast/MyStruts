@@ -10,10 +10,45 @@
 			<result name="success">index.jsp</result>
 		</action>
 	</package>
-	
+
 	<package name="data1" namespace="/study" extends="struts-default">
 		<action name="login" class="bupt.tjlcast.study.DataDemo.UserAction">
-			<result name="success">index.jsp</result>
+			<result name="success">/index.jsp</result>
 		</action>
 	</package>
+
+	<package name="file" namespace="/study" extends="struts-default">
+		<action name="upload" class="bupt.tjlcast.study.DataDemo.FileAction">
+			<!-- 限制文件上传的大小：通过向使用的运行栈的某个监听其注入对应的值 -->
+			<interceptor-ref name="defaultStack">
+				<!-- <interceptor name="fileUpload" class="org.apache.struts2.interceptor.FileUploadInterceptor"/> -->
+				<!-- 限制后缀名 -->
+				<param name="fileUpload.allowedExtensionsSet">txt,jpg,jsp</param>
+				<!-- 限制文件类型 -->
+				<param name="fileUpload.allowedTypesSet">text/plain</param>
+			</interceptor-ref>
+
+			<result name="success">/index.jsp</result>
+			<!-- 配置错误信息 -->
+			<result name="input">/error.jsp</result>
+		</action>
+
+		<action name="down_*" class="bupt.tjlcast.study.DataDemo.DownAction"
+			method="{1}">
+			<result name="download" type="stream">
+				<!-- 运行下载的文件类型：二进制文件 -->
+				<param name="contentType">application/octet-stream</param>
+				<!-- 对应action中的属性：返回流的方法getAttrInputStream -->
+				<param name="inputName">attrInputStream</param>
+				<!-- 下载时浏览器显示的文件名 -->
+				<param name="contentDisposition">attachment;filename="${downFileName}"</param>
+				<!-- 缓存区大小设置 -->
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="list">/list.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+
+	</package>
+
 </struts>
