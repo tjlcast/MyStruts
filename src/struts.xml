@@ -61,4 +61,5 @@
 	 <include file="config1/config1.xml"></include>
 	 <include file="config2/config2.xml"></include>
 	 <include file="bupt/tjlcast/study/DataDemo/data_struts.xml"></include>
+	 <include file="bupt/tjlcast/study/day30/user_struts.xml"></include>
 </struts>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="day30User" extends="struts-default" namespace="/day30">
+	
+		<global-results>
+			<!-- 本包的全局results -->
+			<result name="error">/error.jsp</result>
+		</global-results>
+	
+		<action name="user_*" class="bupt.tjlcast.study.day30.action.UserAction" method="{1}">
+			<!-- jump view --> 
+			
+			<!-- 1.fail -->
+			<result name="input">/login.jsp</result>
+			
+			<!-- 2.login success -->
+			<result name="loginSuccess" type="redirectAction">user_list</result>
+			
+			<!-- 3.show list -->
+			<result name="list">/WEB-INF/list.jsp</result>
+				
+			<!-- 4.error(使用全局results) -->		
+		</action>
+	</package>
+</struts>

@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }/study/login" method="post">
-		name: <input name="name" type="text" /><br />
-		pwd: <input name="pwd" type="password" /><br />
-		age: <input name="age" type="text" /><br />
-		birth: <input name="birth" type="text" /><br />
+	<form action="${pageContext.request.contextPath }/day30/user_login" method="post">
+		name: <input name="admin.userName" type="text" /><br />
+		pwd: <input name="admin.pwd" type="password" /><br />
+		<!-- age: <input name="age" type="text" /><br />
+		birth: <input name="birth" type="text" /><br /> -->
 		<input type="submit" />
 	</form>
 </body>
