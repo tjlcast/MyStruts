@@ -58,9 +58,8 @@ public class UserAction extends ActionSupport{
 		
 		try {
 			List<Admin> listAdmin = adminService.getAll() ;
-			// 保存到session中
+			// 保存到request中(very important)
 			ActionContext.getContext().getContextMap().put("listAdmin", listAdmin) ;
-			
 			return "list" ;
 		} catch (Exception e) {
 			return "error" ;

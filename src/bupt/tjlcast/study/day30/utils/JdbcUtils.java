@@ -14,6 +14,7 @@ public class JdbcUtils {
 	private static DataSource dataSource ;
 	static {
 		dataSource = new ComboPooledDataSource("mySource") ;
+		System.out.println("Pool initial finish!") ;
 	}
 
 	
@@ -28,6 +29,7 @@ public class JdbcUtils {
 	 * 得到QueryRunner
 	 */
 	public QueryRunner getQueryRunner() {
+		System.out.println("getQueryRunner");
 		return new QueryRunner(dataSource) ;
 	}
 }

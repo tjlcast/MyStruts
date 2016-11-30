@@ -1,4 +1,4 @@
-package bupt.tjlcast.study.day30.a_interceptor;
+package bupt.tjlcast.study.day30.interceptor;
 
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.Interceptor;

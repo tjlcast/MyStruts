@@ -16,7 +16,7 @@
 			<td>name</td>
 			<td>pwd</td>
 		</tr>
-		<c:forEach items="sessionScope.listAdmin" var="admin" varStatus="vs">
+		<c:forEach items="${requestScope.listAdmin }" var="admin" varStatus="vs">
 			<tr>
 				<td>${admin.id }</td>
 				<td>${admin.userName }</td>
